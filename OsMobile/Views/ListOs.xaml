@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+              xmlns:sk="clr-namespace:Xamarin.Forms.Skeleton;assembly=Xamarin.Forms.Skeleton"
+              xmlns:renderers="clr-namespace:OsMobile.Renderers"
+              BackgroundColor="#791AE5"
+              NavigationPage.HasNavigationBar="False"
+             xmlns:models="clr-namespace:OsMobile.Models"
+            
+             x:Class="OsMobile.Views.ListOs">
+     <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+
+        <StackLayout>
+            <Grid Margin="0,0,0,0">
+                <StackLayout Margin="10,0,10,0" Spacing="10">
+                   <Image
+                        HeightRequest="30"
+                        HorizontalOptions="Start"
+                        Source="hamburgerMenu"
+                        VerticalOptions="Start"
+                        WidthRequest="30" /> 
+                    <Label
+                        
+                        FontAttributes="Bold"
+                        FontSize="28"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Ordem de Serviço"
+                        TextColor="White"
+                        VerticalOptions="StartAndExpand"
+                        WidthRequest="400" />
+                </StackLayout>
+                <Image
+                    HorizontalOptions="EndAndExpand"
+                    Source="bgImage"
+                    
+                    WidthRequest="150" />
+                 <yummy:PancakeView
+                    Margin="20,0,20,-20"
+                    Padding="10,0,0,0"
+                    BackgroundColor="White"
+                   Border="{yummy:BorderMarkup Color=#FFFFFF, Thickness='1' }"
+                    CornerRadius="25"
+                  
+                    HeightRequest="50"
+                    VerticalOptions="EndAndExpand">
+                 <StackLayout Orientation="Horizontal">
+                        <Image
+                            HeightRequest="25"
+                            HorizontalOptions="Start"
+                            Source="search"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="25" />
+                        <renderers:BorderlessEntry
+                            ClearButtonVisibility="WhileEditing"
+                            FontSize="18"
+                            HorizontalOptions="FillAndExpand"
+                            Keyboard="Text"
+                            Placeholder="Número da O.S "
+                            PlaceholderColor="#99A1B3"
+                            TextColor="#484848" />
+                    </StackLayout> 
+                </yummy:PancakeView>
+            </Grid>
+            <yummy:PancakeView
+                Margin="0,30,0,0"
+               
+                BackgroundColor="White"
+                CornerRadius="40,40,0,0"
+                VerticalOptions="FillAndExpand">
+                <StackLayout>
+                    <Label
+                        Margin="20"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="How to get started?"
+                        TextColor="#791AE5"
+                        VerticalOptions="Center" />
+                    <Grid>
+	
+	                  <!-- Inicio-->
+
+                        <Frame CornerRadius="0" Padding="0" >
+    <StackLayout>
+      
+
+        <RefreshView Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=OneWay}">
+            <CollectionView
+                x:Name="ItemsListView"
+                Margin="0,0,0,0"
+                 
+                BackgroundColor="#ffffff"
+                ItemsSource="{Binding ListaOs}"
+                SelectionChanged="ItemsListView_SelectionChanged"
+                SelectionMode="Single"
+               
+                HorizontalOptions="FillAndExpand">
+                
+
+              
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:OrdemServico">
+                        <Frame HeightRequest="100" Margin="0,-10,0,0">
+                        <yummy:PancakeView         
+                            Margin="0,-10,0,-15"
+                            Padding="0,7,0,0"
+                            BackgroundColor="White"
+                            CornerRadius="10"
+                            HeightRequest="100"
+                          Opacity="5"
+                            HorizontalOptions="FillAndExpand"  >
+                               <yummy:PancakeView.Shadow>
+                    <yummy:DropShadow x:Name="shadow" Color="#000000" BlurRadius="10" Offset="20,20" />
+                             </yummy:PancakeView.Shadow>
+                          
+                        
+                            <StackLayout>
+                               
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="3*" />
+                                    </Grid.ColumnDefinitions>
+
+                                
+                                    <yummy:PancakeView
+                                        CornerRadius="10"
+                                     HeightRequest="100"
+                                        HorizontalOptions="Center"
+                                        Opacity="1"
+                                        BackgroundColor="LightSeaGreen"
+                                        VerticalOptions="Center"
+                                        Grid.Column="0"
+                                      
+                                        WidthRequest="100">
+                                        <Label
+                                          Grid.Column="1"
+                                         Margin="10,0,0,0"
+                                        FontSize="18"
+                                          VerticalOptions="Center"
+                                        LineBreakMode="NoWrap"
+                                            Text="O.S 1012"
+                                            TextColor="White"
+                                        Style="{StaticResource headerLabel}"
+                                       />
+                                        
+   
+                                    </yummy:PancakeView>
+                                     <Label
+                                          Grid.Column="1"
+                                         Margin="10,0,0,0"
+                                        FontSize="18"
+                                        LineBreakMode="NoWrap"
+                                        Style="{StaticResource headerLabel}"
+                                        Text="{Binding Nome}" />
+                                    <Label
+                                        Grid.Column="1"
+                                        Margin="10,20,0,0"
+                                        FontSize="14"
+                                        LineBreakMode="WordWrap"
+                                        Style="{StaticResource textLabel}"
+                                        Text="{Binding Modelo}" />
+                                  
+                                </Grid>
+
+                            </StackLayout>
+                        </yummy:PancakeView>
+                            </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+           
+    </StackLayout>
+        </Frame>
+
+                        <!--Fim-->
+
+	</Grid>
+                </StackLayout>
+
+            </yummy:PancakeView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

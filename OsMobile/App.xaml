@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<prism:PrismApplication
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms"
+    mc:Ignorable="d"
+    x:Class="OsMobile.App">
+    <Application.Resources>
+        <Color x:Key="ColorPrimary">#791AE5</Color>
+        <Color x:Key="ColorPrimaryDark">#791AE5</Color>
+        <Color x:Key="ColorAccent">#791AE5</Color>
+        <Color x:Key="ColorRevenue">#791AE5</Color>
+        <Color x:Key="ColorExpense">#c41212</Color>
+        <Color x:Key="ColorTransfer">#146ae3</Color>
+           <Color x:Key="DarkBlueColor">#222e3c</Color>
+        <Color x:Key="BlueColor">#4c6277</Color>
+        <Color x:Key="BlackColor">#0d1a26</Color>
+        <Color x:Key="RedColor">#e73d3b</Color>
+        <Color x:Key="DarkRedColor">#c92726</Color>
+        <Color x:Key="DarkGrayColor">#828282</Color>
+        <Color x:Key="GrayColor">#E3E3E3</Color>
+        <Color x:Key="WhiteColor">#ffffff</Color>
+        <Color x:Key="primaryColor">#791AE5</Color>
+        
+
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="{StaticResource ColorPrimary}" />
+            <Setter Property="BarTextColor" Value="White" />
+        </Style>
+         <Style x:Key="borderStyle"
+           TargetType="BoxView">
+        <Setter Property="BackgroundColor"
+                Value="WhiteSmoke"/>
+        <Setter Property="HeightRequest"
+                Value="3"/>
+        </Style>
+                
+
+        
+            <!--  Pagina NoticePartner (Início)  -->
+
+
+         <ResourceDictionary>
+            <ResourceDictionary Source="/Styles/LightTheme.xaml"/>
+            <!--  font families  -->
+            <OnPlatform
+                x:Key="RegularFontFamily"
+                x:TypeArguments="x:String"
+                Android="sans-serif"
+                iOS="HelveticaNeue" />
+            <OnPlatform
+                x:Key="LightFontFamily"
+                x:TypeArguments="x:String"
+                Android="sans-serif-light"
+                iOS="HelveticaNeue-Light" />
+            <OnPlatform
+                x:Key="MediumFontFamily"
+                x:TypeArguments="x:String"
+                Android="sans-serif-medium"
+                iOS="HelveticaNeue-Medium" />
+            <OnPlatform
+                x:Key="BoldFontFamily"
+                x:TypeArguments="x:String"
+                Android="sans-serif-medium"
+                iOS="HelveticaNeue-Bold" />
+             
+
+
+            <!--  fonts  -->
+             <Style x:Key="headerLabel" TargetType="Label">
+                  <Setter Property="FontFamily" Value="{StaticResource BoldFontFamily}" />
+             </Style>
+             <Style x:Key="textLabel" TargetType="Label">
+                  <Setter Property="FontFamily" Value="{StaticResource BoldFontFamily}" />
+             </Style>
+             <Style TargetType="Button">
+                <Setter Property="FontFamily" Value="{StaticResource BoldFontFamily}" />
+              </Style>
+             
+             <Style TargetType="Label" x:Key="TitleFont">
+                <Setter Property="FontFamily" Value="{StaticResource BoldFontFamily}" />
+                <Setter Property="FontSize" Value="20" />
+             </Style>
+             
+             <Style TargetType="Label" x:Key="HandleFont">
+                <Setter Property="FontFamily" Value="{StaticResource BoldFontFamily}" />
+                <Setter Property="FontSize" Value="12" />
+             </Style>
+             
+             <Style TargetType="Label" x:Key="BodyFont">
+                <Setter Property="FontFamily" Value="{StaticResource LightFontFamily}" />
+                <Setter Property="FontSize" Value="12" />
+             </Style>
+
+            <!--  styles  -->
+             <Color x:Key="BodyTextColor">#791AE5</Color>
+             <Color x:Key="primaryColor1">#791AE5</Color>
+
+			<Style x:Key="TitleLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource BodyTextColor}" />
+                <Setter Property="Font" Value="{StaticResource TitleFont}" />
+            </Style>
+
+			<Style x:Key="HandleLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource BodyTextColor}" />
+                <Setter Property="Font" Value="{StaticResource HandleFont}" />
+            </Style>
+
+			<Style x:Key="BodyLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource BodyTextColor}" />
+                <Setter Property="Font" Value="{StaticResource BodyFont}" />
+            </Style>
+         <Style x:Key="listOptionLayoutTextStyle"
+           TargetType="Label">
+         <Setter Property="Padding"
+                Value="10"/>
+        <Setter Property="VerticalOptions"
+                Value="CenterAndExpand"/>
+        <Setter Property="TextColor"
+                Value="{ StaticResource primaryColor1 }"/>
+         </Style>
+             
+			
+        </ResourceDictionary>
+
+
+
+        <!--  Pagina NoticePartner (FIM)  -->
+
+    </Application.Resources>
+</prism:PrismApplication>
+

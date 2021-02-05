@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OsMobile.Views.Configuracao.ConfigurarOS"
+             xmlns:xe="clr-namespace:XamEffects;assembly=XamEffects"
+             xmlns:renderers="clr-namespace:OsMobile.Renderers"
+    NavigationPage.HasNavigationBar="False"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    BackgroundColor="#791AE5"
+      Padding="0,0,0,0">
+    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  VerticalScrollBarVisibility="Never">
+        <StackLayout >
+            <StackLayout  Margin="0,0,0,0"  Orientation="Horizontal">
+                <StackLayout Margin="20,10,20,0" Spacing="20">
+                  <!--  <Image
+                    HeightRequest="30"
+                    HorizontalOptions="Start"
+                    Source="close"
+                    VerticalOptions="Start"
+                    WidthRequest="30" />-->
+                    <Label
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    Text="Configurar O.S"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+                <Image Source="bgImage1" WidthRequest="120" />
+            </StackLayout>
+            <yummy:PancakeView
+            Margin="0,20,0,0"
+            Padding="30,30,30,30"
+            BackgroundColor="White"
+            CornerRadius="40,40,0,0"
+            VerticalOptions="FillAndExpand">
+                <StackLayout >
+                   <StackLayout>
+                     <TableView Intent="Settings">
+                            <TableRoot>
+                                <TableSection Title="Campos obrigatórios do Cliente">
+                                    <SwitchCell Text="Nome" />
+                                    <SwitchCell Text="CPF" On="true" />
+                                    <SwitchCell Text="Telefone" On="true" />
+                                    <SwitchCell Text="Email" On="true" />
+                                     <SwitchCell Text="Cep"  />
+                                    <SwitchCell Text="Endereço" />
+                                     <SwitchCell Text="Bairro" />
+                                     <SwitchCell Text="Estado" />
+                                     <SwitchCell Text="Cidade" />
+                                </TableSection>
+                                <TableSection Title="Campos obrigatórios do Aparelho">
+                                    <SwitchCell Text="Marca" On="true" />
+                                     <SwitchCell Text="Modelo" On="true" />
+                                     <SwitchCell Text="Problema" On="true" />
+                                    <SwitchCell Text="IMEI-1" On="true" />
+                                    <SwitchCell Text="IMEI-2" />
+                                </TableSection>
+                            </TableRoot>
+                        </TableView>
+                    </StackLayout>
+                     <StackLayout >
+                    
+
+                
+                    <yummy:PancakeView
+                        x:Name="btnEnviarSenha"
+                    BackgroundColor="#791AE5"
+                    Border="{yummy:BorderMarkup Color=#FFFFFF, Thickness='1' }"
+                    CornerRadius="25"
+                    xe:TouchEffect.Color="Gray"
+                    xe:Commands.Tap="{Binding TapCommand}"
+                    HeightRequest="50"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="200">
+                        
+                        <Label
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Alterar Senha"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" >
+                           
+                        </Label>
+                           
+                    </yummy:PancakeView>
+                    <Label 
+                        FontAttributes="None"
+                        FontSize="18"
+                        HorizontalOptions="CenterAndExpand"
+                        TextColor="#99A1B3"
+                        VerticalOptions="Start" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                              
+                                <Span TextColor="#791AE5" Text="Cancelar" ></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                         <Label.GestureRecognizers>
+                               <TapGestureRecognizer Tapped="CancelarClick"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                 </StackLayout>
+                </StackLayout>
+            </yummy:PancakeView>
+               
+        </StackLayout>
+    </ScrollView>
+  
+</ContentPage>

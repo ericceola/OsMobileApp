@@ -1,0 +1,755 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	 xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+              xmlns:sk="clr-namespace:Xamarin.Forms.Skeleton;assembly=Xamarin.Forms.Skeleton"
+              xmlns:renderers="clr-namespace:OsMobile.Renderers"
+              BackgroundColor="#791AE5"
+              Title="Nova Ordem de Serviço"
+              NavigationPage.HasNavigationBar="True"
+             xmlns:models="clr-namespace:OsMobile.Models"
+			 x:Class="OsMobile.Views.AddOs">
+     <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+
+        <StackLayout>
+            
+            <yummy:PancakeView
+                Margin="0,10,0,0"
+               
+                BackgroundColor="#f1f2f1"
+                CornerRadius="40,40,0,0"
+                VerticalOptions="FillAndExpand">
+                <StackLayout>
+                     <Grid Margin="10,0,0,0" ColumnSpacing="0" RowSpacing="30">
+                 <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="300" />
+                        </Grid.ColumnDefinitions>
+                          <Grid Grid.Row="0"
+                            Grid.Column="0">
+
+                              <Image Source=""></Image>
+
+                          </Grid>
+                
+                     <Grid Grid.Row="0"
+                            Grid.Column="1">
+                    <Label
+                        Margin="20"
+                        FontAttributes="Bold"
+                        FontSize="28"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="Next Plug"
+                        TextColor="#791AE5"
+                        VerticalOptions="Center" />
+                         </Grid>
+                         </Grid>
+
+                    <Grid>
+	
+	                  <!-- Inicio-->
+
+                
+                                
+                    <StackLayout>
+                         <StackLayout>
+                            <Label Text="Informações da O.S" FontSize="22" HorizontalOptions="Center" VerticalOptions="Start" TextColor="#000000" />
+                        </StackLayout>
+         
+                              <yummy:PancakeView
+                                    Margin="10"
+                                    Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                                    BackgroundColor="#FFFFFF"
+                                    HorizontalOptions="FillAndExpand"
+                                    HeightRequest="390" CornerRadius="20">
+                                  <Grid Margin="10,0,0,0" ColumnSpacing="0" RowSpacing="30">
+
+                                      
+                                     <Grid.ColumnDefinitions>
+                                         <ColumnDefinition Width="*" />
+                                         <ColumnDefinition Width="30" />
+                                      </Grid.ColumnDefinitions>
+                                      <Grid Grid.Row="0" Grid.Column="0">
+                                          <Grid.RowDefinitions>
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                        <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                        <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                      </Grid.RowDefinitions>
+                                           <StackLayout Grid.Row="0">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium" Margin="0,10,0,0">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="Número da O.S: &#160;"/>
+                                                                <Span Text="109332" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                            <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="1"/>
+                                          <StackLayout Grid.Row="2">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium" Margin="0,5,0,0">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="Atendente: &#160;"/>
+                                                                <Span Text="Thais" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                            <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="3"/>
+                                          <StackLayout Grid.Row="4">
+                                                   <Label HorizontalOptions="StartAndExpand" Margin="0,5,0,0"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="Data da Entrada: &#160;"/>
+                                                                <Span Text="01/02/2021" />
+                                                                
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                         
+                                            <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="3" Grid.Row="5"/>
+                                          <StackLayout Grid.Row="6">
+                                                   <Label HorizontalOptions="StartAndExpand" Margin="0,5,0,0"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="Data da Saída: &#160;"/>
+                                                                <Span Text="" />
+                                                                
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                           <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="7"/>
+                                          <StackLayout Grid.Row="8">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="Status da O.S: &#160;"/>
+                                                                <Span Text="Aberta" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                          <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="9"/>
+                                           <StackLayout Grid.Row="10">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium" Margin="0,5,0,0">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="Nome: &#160;"/>
+                                                                <Span Text="Eric Ceola" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                            <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="11"/>
+                                          <StackLayout Grid.Row="12">
+                                                   <Label HorizontalOptions="StartAndExpand" Margin="0,5,0,0"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="CPF: &#160;"/>
+                                                                <Span Text="274.163.718-05" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                           <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="13"/>
+                                          <StackLayout Grid.Row="14">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="Celular: &#160;"/>
+                                                                <Span Text="(11) 98388-8983" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                           <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="15"/>
+                                          <StackLayout Grid.Row="16">
+                                                   <Label HorizontalOptions="StartAndExpand" Margin="0,5,0,0"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="Email: &#160;"/>
+                                                                <Span Text="ericceol@hotmail.com" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                      </Grid>
+                     
+                                       <Grid Grid.Row="0" Grid.Column="1">
+
+                                                      <Image Source="Edit" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="0,10,5,0">
+                                                            <Image.GestureRecognizers>
+                                                                    <TapGestureRecognizer
+                                                                            Tapped="InfOs_Click"
+                                                                            NumberOfTapsRequired="1" />
+                                                              </Image.GestureRecognizers>
+                                                       </Image>
+
+                                         </Grid>
+                                         
+                                  </Grid>
+                         </yummy:PancakeView>
+               
+                          <StackLayout>
+                         <Label Text="Informações do Aparelho"  FontSize="22"  HorizontalOptions="Center" VerticalOptions="Start" TextColor="#000000" />
+                          </StackLayout>
+
+                                  <yummy:PancakeView
+                                    Margin="10"
+                                    Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                                    BackgroundColor="#FFFFFF"
+                                    HorizontalOptions="FillAndExpand"
+                                    HeightRequest="290" CornerRadius="20">
+               
+                                     <Grid Margin="10,0,0,0" ColumnSpacing="0" RowSpacing="30">
+
+                                     <Grid.ColumnDefinitions>
+                                         <ColumnDefinition Width="*" />
+                                         <ColumnDefinition Width="30" />
+                                      </Grid.ColumnDefinitions>
+                                       <Grid Grid.Row="0" Grid.Column="0">
+
+                                            <Grid.RowDefinitions>
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="15" />
+                                         
+                                      </Grid.RowDefinitions>
+                                          <StackLayout Grid.Row="0">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium" Margin="0,10,0,0">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="Marca: &#160;"/>
+                                                                <Span Text="Apple" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                            <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="1"/>
+                                          <StackLayout Grid.Row="2">
+                                                   <Label HorizontalOptions="StartAndExpand" Margin="0,5,0,0"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="Modelo: &#160;"/>
+                                                                <Span Text="iPhone 8" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                           <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="3"/>
+                                          <StackLayout Grid.Row="4">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="Cor: &#160;"/>
+                                                                <Span Text="Preto" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                           <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="5" Grid.Row="5"/>
+                                          <StackLayout Grid.Row="6">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="S/N: &#160;"/>
+                                                                <Span Text="3424242vfgk33" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                           <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="7"/>
+                                          <StackLayout Grid.Row="8">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="IMEI-1: &#160;"/>
+                                                                <Span Text="3232343-34" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                           <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="9"/>
+                                          <StackLayout Grid.Row="10">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="IMEI-2: &#160;"/>
+                                                                <Span Text="" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                           <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="11"/>
+                                          <StackLayout Grid.Row="12">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="Senha: &#160;"/>
+                                                                <Span Text="456786" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+
+                                         </Grid>
+                                          <Grid Grid.Row="0" Grid.Column="1">
+
+                                                      <Image Source="Edit" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="0,10,5,0"></Image>
+
+                                         </Grid>
+                                         
+                                  </Grid>
+               
+                                </yummy:PancakeView>
+
+                         <StackLayout>
+                         <Label Text="Check-in" FontSize="22" HorizontalOptions="Center" VerticalOptions="Start" TextColor="#000000" />
+                          </StackLayout>
+
+                                  <yummy:PancakeView
+                                    Margin="10"
+                                    Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                                    BackgroundColor="#FFFFFF"
+                                    HorizontalOptions="FillAndExpand"
+                                    HeightRequest="380" CornerRadius="20">
+               
+                                     <Grid Margin="10,0,0,0" ColumnSpacing="0" RowSpacing="30">
+
+                                     <Grid.ColumnDefinitions>
+                                         <ColumnDefinition Width="*" />
+                                         <ColumnDefinition Width="30" />
+                                      </Grid.ColumnDefinitions>
+                                       <Grid Grid.Row="0" Grid.Column="0">
+
+                                            <Grid.RowDefinitions>
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="15" />
+                                      </Grid.RowDefinitions>
+                                             <StackLayout Grid.Row="0">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium" Margin="0,10,0,0">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span FontSize="20" Text="(  ) &#160;"/>
+                                                                <Span FontSize="20" Text="Aparelho não liga / Sem teste" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                            <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="1"/>
+                                          <StackLayout Grid.Row="2">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium" Margin="0,10,0,0">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span FontSize="20" Text="(  ) &#160;"/>
+                                                                <Span FontSize="20" Text="Display riscado / danificado" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                            <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="3"/>
+                                          <StackLayout Grid.Row="4">
+                                                   <Label HorizontalOptions="StartAndExpand" Margin="0,5,0,0"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span FontSize="20" Text="(  ) &#160;"/>
+                                                                <Span FontSize="20" Text="Câmera Frontal danificada" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                           <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="5"/>
+                                          <StackLayout Grid.Row="6">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span FontSize="20" Text="(  ) &#160;"/>
+                                                                <Span FontSize="20" Text="Câmera traseira danificada" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                           <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="5" Grid.Row="7"/>
+                                          <StackLayout Grid.Row="8">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span FontSize="20" Text="(  ) &#160;"/>
+                                                                <Span FontSize="20" Text="Carcaça riscada / danificada" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>                                           
+                                           <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="9"/>
+                                          <StackLayout Grid.Row="10">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span FontSize="20" Text="(  ) &#160;"/>
+                                                                <Span FontSize="20" Text="Tampa T riscada / danificada" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                           <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="11"/>
+                                          <StackLayout Grid.Row="12">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span FontSize="20" Text="(  ) &#160;"/>
+                                                                <Span FontSize="20" Text="Digital danificada" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                           <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="13"/>
+                                          <StackLayout Grid.Row="14">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span FontSize="20" Text="(  ) &#160;"/>
+                                                                <Span FontSize="20" Text="Face ID danificada" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                            <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="15"/>
+                                          <StackLayout Grid.Row="16">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span FontSize="20" Text="(  ) Outros: &#160;"/>
+                                                                <Span FontSize="20" Text=" " />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                         </Grid>
+                                          <Grid Grid.Row="0" Grid.Column="1">
+
+                                                      <Image Source="Edit" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="0,10,5,0"></Image>
+
+                                         </Grid>
+                                         
+                                  </Grid>
+               
+                                </yummy:PancakeView>
+                         <StackLayout>
+                         <Label Text="Informação do problema" FontSize="22" HorizontalOptions="Center" VerticalOptions="Start" TextColor="#000000" />
+                          </StackLayout>
+
+                                  <yummy:PancakeView
+                                    Margin="10"
+                                    Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                                    BackgroundColor="#FFFFFF"
+                                    HorizontalOptions="FillAndExpand"
+                                    HeightRequest="150" CornerRadius="20">
+               
+                                       <Grid Margin="10,0,0,0" ColumnSpacing="0" RowSpacing="30">
+
+                                     <Grid.ColumnDefinitions>
+                                         <ColumnDefinition Width="300" />
+                                         <ColumnDefinition Width="30" />
+                                      </Grid.ColumnDefinitions>
+                                       <Grid Grid.Row="0"  Grid.Column="0">
+                                          <Grid.RowDefinitions>
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="115" />
+                                         
+                                      </Grid.RowDefinitions>
+                                          <StackLayout Grid.Row="0">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium" Margin="0,10,0,0">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="Descrição: &#160;"/>
+                                                                
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                            <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="1"/>
+                                          <StackLayout Grid.Row="2">
+                                                   <Label HorizontalOptions="StartAndExpand" Margin="0,5,0,0"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="Aparelho não liga"/>
+                                                            
+                                                                
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+
+
+                                      </Grid>
+                     
+                                          <Grid Grid.Row="0" Grid.Column="1">
+
+                                                      <Image Source="Edit" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="0,10,5,0"></Image>
+
+                                         </Grid>
+                                         
+                                  </Grid>
+               
+                                  </yummy:PancakeView>
+                         <StackLayout>
+                         <Label Text="Serviço e Peças utilizadas"  FontSize="22" HorizontalOptions="Center" VerticalOptions="Start" TextColor="#000000" />
+                          </StackLayout>
+
+                                  <yummy:PancakeView
+                                    Margin="10"
+                                    Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                                    BackgroundColor="#FFFFFF"
+                                    HorizontalOptions="FillAndExpand"
+                                    HeightRequest="220" CornerRadius="20">
+               
+                                       <Grid Margin="10,0,0,0" ColumnSpacing="0" RowSpacing="30">
+
+                                     <Grid.ColumnDefinitions>
+                                         <ColumnDefinition Width="300" />
+                                         <ColumnDefinition Width="30" />
+                                      </Grid.ColumnDefinitions>
+                                         <Grid Grid.Row="0"  Grid.Column="0">
+                                          <Grid.RowDefinitions>
+                                              <RowDefinition Height="30" />
+                                        
+                                         
+                                      </Grid.RowDefinitions>
+                                            
+                                        
+                                          <StackLayout Grid.Row="0">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium" Margin="0,10,0,0">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                               
+                                                                
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                  
+                                      </Grid>
+                     
+                                          <Grid Grid.Row="0" Grid.Column="1">
+                                               <Image Source="Edit" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="0,10,5,0"></Image>
+                                           </Grid>
+                                         
+                                  </Grid>
+               
+                                  </yummy:PancakeView>
+
+
+                         <StackLayout>
+                         <Label Text="Laudo Técnico" FontSize="22" HorizontalOptions="Center" VerticalOptions="Start" TextColor="#000000" />
+                          </StackLayout>
+
+                                  <yummy:PancakeView
+                                    Margin="10"
+                                    Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                                    BackgroundColor="#FFFFFF"
+                                    HorizontalOptions="FillAndExpand"
+                                    HeightRequest="220" CornerRadius="20">
+               
+                                       <Grid Margin="10,0,0,0" ColumnSpacing="0" RowSpacing="30">
+
+                                     <Grid.ColumnDefinitions>
+                                         <ColumnDefinition Width="300" />
+                                         <ColumnDefinition Width="30" />
+                                      </Grid.ColumnDefinitions>
+                                         <Grid Grid.Row="0"  Grid.Column="0">
+                                          <Grid.RowDefinitions>
+                                              <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="30" />
+                                         <RowDefinition Height="1" />
+                                         <RowDefinition Height="115" />
+                                         
+                                      </Grid.RowDefinitions>
+                                              <StackLayout Grid.Row="0">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium" Margin="0,10,0,0">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="Técnico: &#160;"/>
+                                                                <Span Text="Sarah"/>
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                            <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="1" Grid.Row="1"/>
+                                        
+                                          <StackLayout Grid.Row="2">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium" Margin="0,10,0,0">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="Descrição: &#160;"/>
+                                                                
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                            <BoxView BackgroundColor="#f1f2f1" WidthRequest="100"  HeightRequest="3" Grid.Row="3"/>
+                                          <StackLayout Grid.Row="4">
+                                                   <Label HorizontalOptions="StartAndExpand" Margin="0,5,0,0"
+                                                        FontSize="Medium">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text=" "/>
+                                                            
+                                                                
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+
+
+                                      </Grid>
+                     
+                                          <Grid Grid.Row="0" Grid.Column="1">
+
+                                                      <Image Source="Edit" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="0,10,5,0"></Image>
+
+                                         </Grid>
+                                         
+                                  </Grid>
+               
+                                  </yummy:PancakeView>
+
+                        <StackLayout>
+                         <Label Text="Assinatura" FontSize="22" HorizontalOptions="Center" VerticalOptions="Start" TextColor="#000000" />
+                          </StackLayout>
+
+                                  <yummy:PancakeView
+                                    Margin="10"
+                                    Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                                    BackgroundColor="#FFFFFF"
+                                    HorizontalOptions="FillAndExpand"
+                                    HeightRequest="100" CornerRadius="20">
+               
+                                       <Grid Margin="10,0,0,0" ColumnSpacing="0" RowSpacing="30">
+
+                                     <Grid.ColumnDefinitions>
+                                         <ColumnDefinition Width="300" />
+                                         <ColumnDefinition Width="30" />
+                                      </Grid.ColumnDefinitions>
+                                           <Grid Grid.Row="0"  Grid.Column="0">
+                                          <Grid.RowDefinitions>
+                                              <RowDefinition Height="60" />
+                                         <RowDefinition Height="1" />
+                                         
+                                         
+                                      </Grid.RowDefinitions>
+                                              <StackLayout Grid.Row="0">
+                                                   <Label HorizontalOptions="StartAndExpand"
+                                                        FontSize="Medium" Margin="0,20,0,0">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text=""/>
+                                                               
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                           </StackLayout>
+                                            <BoxView BackgroundColor="#000000" WidthRequest="100"  HeightRequest="1" Grid.Row="1"/>
+                                        
+                                         
+                                      </Grid>
+
+
+                                           <Grid Grid.Row="0" Grid.Column="1">
+
+                                                      <Image Source="Edit" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="0,10,5,0"></Image>
+
+                                         </Grid>
+                                         
+                                  </Grid>
+               
+                                  </yummy:PancakeView>
+                           </StackLayout>
+
+                           
+
+                        <!--Fim-->
+
+	                </Grid>
+                </StackLayout>
+
+            </yummy:PancakeView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

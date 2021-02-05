@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OsMobile.Views.Configuracao.PerfilAssistencia"
+             xmlns:xe="clr-namespace:XamEffects;assembly=XamEffects"
+             xmlns:renderers="clr-namespace:OsMobile.Renderers"
+    NavigationPage.HasNavigationBar="False"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    BackgroundColor="#791AE5"
+      Padding="0,0,0,0">
+    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout >
+            <StackLayout  Margin="0,0,0,0"  Orientation="Horizontal">
+                <StackLayout Margin="20,10,20,0" Spacing="20">
+                  <!--  <Image
+                    HeightRequest="30"
+                    HorizontalOptions="Start"
+                    Source="close"
+                    VerticalOptions="Start"
+                    WidthRequest="30" />-->
+                    <Label
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    Text="Perfil da Assistência"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+                <Image Source="bgImage1" WidthRequest="120" />
+            </StackLayout>
+            <yummy:PancakeView
+            Margin="0,20,0,0"
+            Padding="30,30,30,30"
+            BackgroundColor="White"
+            CornerRadius="40,40,0,0"
+            VerticalOptions="FillAndExpand">
+                <StackLayout Spacing="10">
+                    <StackLayout Spacing="10">
+                        <Label
+                        Margin="5,0,0,0"
+                        FontSize="20"
+                        Text="Nome da assistência técnica"
+                        TextColor="#99A1B3" />
+                        <yummy:PancakeView
+                        Padding="10,0,0,0"                    
+                        BackgroundColor="White"
+                        Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                        CornerRadius="15"
+                        HeightRequest="50">
+                            <renderers:BorderlessEntry
+                            x:Name="txtAssistencia"
+                            FontSize="20"
+                            ClearButtonVisibility="WhileEditing"
+                          
+                            TextColor="#484848" />
+                        </yummy:PancakeView>
+                    </StackLayout>
+
+                     <StackLayout Spacing="10">
+                        <Label
+                        Margin="5,0,0,0"
+                        FontSize="20"
+                        Text="CNPJ"
+                        TextColor="#99A1B3" />
+                        <yummy:PancakeView
+                        Padding="10,0,0,0"                    
+                        BackgroundColor="White"
+                        Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                        CornerRadius="15"
+                        HeightRequest="50">
+                            <renderers:BorderlessEntry
+                            x:Name="txtCNPJ"
+                            FontSize="20"
+                            ClearButtonVisibility="WhileEditing"
+                          
+                            TextColor="#484848" />
+                        </yummy:PancakeView>
+                    </StackLayout>
+
+                    <StackLayout Spacing="10">
+                        <Label
+                        Margin="5,0,0,0"
+                        FontSize="20"
+                        Text="Responsável"
+                        TextColor="#99A1B3" />
+                        <yummy:PancakeView
+                        Padding="10,0,0,0"                    
+                        BackgroundColor="White"
+                        Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                        CornerRadius="15"
+                        HeightRequest="50">
+                            <renderers:BorderlessEntry
+                            x:Name="txtResponsavel"
+                            FontSize="20"
+                            ClearButtonVisibility="WhileEditing"
+                          
+                            TextColor="#484848" />
+                        </yummy:PancakeView>
+                    </StackLayout>
+
+                    <StackLayout Spacing="10">
+                        <Label
+                        Margin="5,0,0,0"
+                        FontSize="20"
+                        Text="CPF do Responsável"
+                        TextColor="#99A1B3" />
+                        <yummy:PancakeView
+                        Padding="10,0,0,0"                    
+                        BackgroundColor="White"
+                        Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                        CornerRadius="15"
+                        HeightRequest="50">
+                            <renderers:BorderlessEntry
+                            x:Name="txtCPF"
+                            FontSize="20"
+                            ClearButtonVisibility="WhileEditing"
+                          
+                            TextColor="#484848" />
+                        </yummy:PancakeView>
+                    </StackLayout>
+
+                    <StackLayout Spacing="10">
+                        <Label
+                        Margin="5,0,0,0"
+                        FontSize="20"
+                        Text="CEP"
+                        TextColor="#99A1B3" />
+                        <yummy:PancakeView
+                        Padding="10,0,0,0"                    
+                        BackgroundColor="White"
+                        Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                        CornerRadius="15"
+                        HeightRequest="50">
+                            <renderers:BorderlessEntry
+                            x:Name="txtCep"
+                            FontSize="20"
+                            ClearButtonVisibility="WhileEditing"
+                          
+                            TextColor="#484848" />
+                        </yummy:PancakeView>
+                    </StackLayout>
+
+                    <StackLayout Spacing="10">
+                        <Label
+                        Margin="5,0,0,0"
+                        FontSize="20"
+                        Text="UF"
+                        TextColor="#99A1B3" />
+                        <yummy:PancakeView
+                        Padding="10,0,0,0"                    
+                        BackgroundColor="White"
+                        Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                        CornerRadius="15"
+                        HeightRequest="50">
+                             <renderers:RemoveUnderLinePicker
+                             x:Name="cmbUF"
+                             Title="Selecione"
+                            
+                             HorizontalOptions="FillAndExpand"
+                           TextColor="#484848" >
+                               <renderers:RemoveUnderLinePicker.Items>
+                                    <x:String>SP</x:String>
+                                    <x:String>PE</x:String>
+                                    </renderers:RemoveUnderLinePicker.Items>
+                           </renderers:RemoveUnderLinePicker>
+                      
+                        </yummy:PancakeView>
+                    </StackLayout>
+
+                    <StackLayout Spacing="10">
+                        <Label
+                        Margin="5,0,0,0"
+                        FontSize="20"
+                        Text="Cidade"
+                        TextColor="#99A1B3" />
+                        <yummy:PancakeView
+                        Padding="10,0,0,0"                    
+                        BackgroundColor="White"
+                        Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                        CornerRadius="15"
+                        HeightRequest="50">
+                             <renderers:RemoveUnderLinePicker
+                             x:Name="cmbCidade"
+                             Title="Selecione"
+                            
+                             HorizontalOptions="FillAndExpand"
+                           TextColor="#484848" >
+                               <renderers:RemoveUnderLinePicker.Items>
+                                    <x:String>Santo André</x:String>
+                                    <x:String>São Caetano do Sul</x:String>
+                                    </renderers:RemoveUnderLinePicker.Items>
+                           </renderers:RemoveUnderLinePicker>
+                        </yummy:PancakeView>
+                    </StackLayout>
+
+                    <StackLayout Spacing="10">
+                        <Label
+                        Margin="5,0,0,0"
+                        FontSize="20"
+                        Text="Rua"
+                        TextColor="#99A1B3" />
+                        <yummy:PancakeView
+                        Padding="10,0,0,0"                    
+                        BackgroundColor="White"
+                        Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                        CornerRadius="15"
+                        HeightRequest="50">
+                            <renderers:BorderlessEntry
+                            x:Name="txtRua"
+                            FontSize="20"
+                            ClearButtonVisibility="WhileEditing"
+                          
+                            TextColor="#484848" />
+                        </yummy:PancakeView>
+                    </StackLayout>
+                    <StackLayout Spacing="10">
+                        <Label
+                        Margin="5,0,0,0"
+                        FontSize="20"
+                        Text="Bairro"
+                        TextColor="#99A1B3" />
+                        <yummy:PancakeView
+                        Padding="10,0,0,0"                    
+                        BackgroundColor="White"
+                        Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                        CornerRadius="15"
+                        HeightRequest="50">
+                            <renderers:BorderlessEntry
+                            x:Name="txtBairro"
+                            FontSize="20"
+                            ClearButtonVisibility="WhileEditing"
+                          
+                            TextColor="#484848" />
+                        </yummy:PancakeView>
+                    </StackLayout>
+
+                    <StackLayout Spacing="10">
+                        <Label
+                        Margin="5,0,0,0"
+                        FontSize="20"
+                        Text="Complemento"
+                        TextColor="#99A1B3" />
+                        <yummy:PancakeView
+                        Padding="10,0,0,0"                    
+                        BackgroundColor="White"
+                        Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                        CornerRadius="15"
+                        HeightRequest="50">
+                            <renderers:BorderlessEntry
+                            x:Name="txtComplemento"
+                            FontSize="20"
+                            ClearButtonVisibility="WhileEditing"
+                          
+                            TextColor="#484848" />
+                        </yummy:PancakeView>
+                    </StackLayout>
+
+                 <StackLayout Spacing="30" ></StackLayout>
+                    <yummy:PancakeView
+                        x:Name="btnSalvar"
+                    BackgroundColor="#791AE5"
+                    Border="{yummy:BorderMarkup Color=#FFFFFF, Thickness='1' }"
+                    CornerRadius="25"
+                    xe:TouchEffect.Color="Gray"
+                    xe:Commands.Tap="{Binding TapCommand}"
+                    HeightRequest="50"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="200">
+                        
+                        <Label
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Salvar"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" >
+                           
+                        </Label>
+                           
+                    </yummy:PancakeView>
+                    <Label
+                        FontAttributes="None"
+                        FontSize="18"
+                        HorizontalOptions="CenterAndExpand"
+                        TextColor="#99A1B3"
+                        VerticalOptions="Start" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                              
+                                <Span TextColor="#791AE5" Text="Cancelar" ></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                         <Label.GestureRecognizers>
+                               <TapGestureRecognizer Tapped="CancelarClick"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                 
+                </StackLayout>
+            </yummy:PancakeView>
+               
+        </StackLayout>
+    </ScrollView>
+  
+</ContentPage>

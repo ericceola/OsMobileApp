@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="OsMobile.Views.Dashboard"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:renderers="clr-namespace:OsMobile.Renderers"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+     xmlns:sk="clr-namespace:Xamarin.Forms.Skeleton;assembly=Xamarin.Forms.Skeleton"
+     xmlns:xe="clr-namespace:XamEffects;assembly=XamEffects"
+    BackgroundColor="#791AE5"
+    NavigationPage.HasNavigationBar="False">
+    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+
+        <StackLayout  sk:Skeleton.IsParent="True"
+                           sk:Skeleton.IsBusy="{Binding IsBusy}"
+                           sk:Skeleton.BackgroundColor="{StaticResource GrayColor}">
+            <Grid Margin="0,0,0,0">
+                <StackLayout Margin="30,0,30,0" Spacing="50"  sk:Skeleton.IsParent="True"
+                           sk:Skeleton.IsBusy="{Binding IsBusy}"
+                           sk:Skeleton.BackgroundColor="{StaticResource GrayColor}">
+                   <!-- <Image
+                        HeightRequest="30"
+                        HorizontalOptions="Start"
+                        Source="hamburgerMenu"
+                        VerticalOptions="Start"
+                        WidthRequest="30" /> -->
+                    <Label
+                        Margin="0,30,0,0"
+                        FontAttributes="Bold"
+                        FontSize="28"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Painel de O.S"
+                        TextColor="White"
+                        VerticalOptions="StartAndExpand"
+                        WidthRequest="200" />
+                </StackLayout>
+                <Image
+                    HorizontalOptions="EndAndExpand"
+                    Source="bgImage"
+                    
+                    WidthRequest="150" />
+              <!--  <yummy:PancakeView
+                    Margin="20,0,20,-20"
+                    Padding="10,0,0,0"
+                    BackgroundColor="White"
+                   Border="{yummy:BorderMarkup Color=#FFFFFF, Thickness='1' }"
+                    CornerRadius="25"
+                  
+                    HeightRequest="50"
+                    VerticalOptions="EndAndExpand">
+                 <StackLayout Orientation="Horizontal">
+                        <Image
+                            HeightRequest="25"
+                            HorizontalOptions="Start"
+                            Source="search"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="25" />
+                        <renderers:BorderlessEntry
+                            ClearButtonVisibility="WhileEditing"
+                            FontSize="18"
+                            HorizontalOptions="FillAndExpand"
+                            Keyboard="Text"
+                            Placeholder="Search here "
+                            PlaceholderColor="#99A1B3"
+                            TextColor="#484848" />
+                    </StackLayout> 
+                </yummy:PancakeView>-->
+            </Grid>
+            
+            <yummy:PancakeView
+                Margin="0,30,0,0"
+                Padding="30,0,30,30"
+                BackgroundColor="White"
+                CornerRadius="40,40,0,0"
+                VerticalOptions="FillAndExpand"  sk:Skeleton.IsParent="True"
+                           sk:Skeleton.IsBusy="{Binding IsBusy}"
+                           sk:Skeleton.BackgroundColor="{StaticResource GrayColor}">
+                <StackLayout sk:Skeleton.IsParent="True"
+                           sk:Skeleton.IsBusy="{Binding IsBusy}"
+                           sk:Skeleton.BackgroundColor="{StaticResource GrayColor}">
+                   
+                    <yummy:PancakeView
+                        x:Name="btnCriarOs"
+                        Margin="10"
+                    BackgroundColor="#791AE5"
+                    Border="{yummy:BorderMarkup Color=#FFFFFF, Thickness='1' }"
+                    CornerRadius="15"
+                   xe:TouchEffect.Color="Gray"
+                    xe:Commands.Tap="{Binding TapCommand}"
+                    HeightRequest="50"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="300">
+                  <Grid Margin="0" ColumnSpacing="0" RowSpacing="30">
+                        
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="260" />
+                        </Grid.ColumnDefinitions>
+                      <Grid Grid.Row="0"
+                            Grid.Column="0">
+                         <Image Source="Plus1" Margin="5,0,0,0" />
+                          </Grid>
+                      <Grid Grid.Row="0"
+                            Grid.Column="1">
+                        <Label
+                          
+
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Criar Ordem de Serviço"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" >
+                            
+                        </Label>
+                     </Grid>
+                </Grid>
+            </yummy:PancakeView>
+                    <Grid Margin="5" ColumnSpacing="20" RowSpacing="30">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="200" />
+                            <RowDefinition Height="200" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <yummy:PancakeView
+                            x:Name="btnPerfilUsuario"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Padding="10"
+                            BackgroundColor="White"
+                            Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                            CornerRadius="15" sk:Skeleton.IsParent="True"
+                            xe:TouchEffect.Color="Gray"
+                            xe:Commands.Tap="{Binding TapCommand}"
+                           sk:Skeleton.IsBusy="{Binding IsBusy}"
+                           sk:Skeleton.BackgroundColor="{StaticResource GrayColor}">
+                             <yummy:PancakeView.Shadow>
+                                  <yummy:DropShadow Color="#791AE5" BlurRadius="10" Offset="20,20" />
+                             </yummy:PancakeView.Shadow>
+                        
+                            <StackLayout sk:Skeleton.IsParent="True"
+                           sk:Skeleton.IsBusy="{Binding IsBusy}"
+                           sk:Skeleton.BackgroundColor="{StaticResource GrayColor}">
+                                <Grid HorizontalOptions="Center"
+                                      VerticalOptions="Center">
+                                  <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                  </Grid.RowDefinitions>
+
+                                  <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                  </Grid.ColumnDefinitions>
+
+                                  <Image HorizontalOptions="Center"
+                                         Source="painel_red"
+                                         Grid.Row="0"
+                                         Grid.Column="0"/>
+                                  <Label HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         FontAttributes="Bold"
+                                         Text="8"
+                                         FontSize="30"
+                                         TextColor="White"
+                                         Grid.Row="0"
+                                         Grid.Column="0"/>
+                                </Grid>
+                                
+                                 
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="20"
+                                    HorizontalOptions="CenterAndExpand"
+                                    HorizontalTextAlignment="Center"
+                                    Text="O.S Aberta"
+                                    TextColor="#791AE5"
+                                    VerticalOptions="CenterAndExpand" />
+                            </StackLayout>
+                        </yummy:PancakeView>
+                        <yummy:PancakeView
+                            x:Name="btnAlterarSenha"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Padding="10"
+                            BackgroundColor="White"
+                            Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1' }"
+                            CornerRadius="15"
+                            xe:TouchEffect.Color="Gray"
+                            xe:Commands.Tap="{Binding TapCommand}"
+                           sk:Skeleton.IsParent="True"
+                           sk:Skeleton.IsBusy="{Binding IsBusy}"
+                           sk:Skeleton.BackgroundColor="{StaticResource GrayColor}">
+                             <yummy:PancakeView.Shadow>
+                                <yummy:DropShadow  Color="#000000"  BlurRadius="10" Offset="20,20" />
+                             </yummy:PancakeView.Shadow>
+                            <StackLayout>
+                                 <Grid HorizontalOptions="Center"
+                                      VerticalOptions="Center">
+                                  <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                  </Grid.RowDefinitions>
+
+                                  <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                  </Grid.ColumnDefinitions>
+
+                                  <Image HorizontalOptions="Center"
+                                         Source="painel_yellow"
+                                         Grid.Row="0"
+                                         Grid.Column="0"/>
+                                  <Label HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         FontAttributes="Bold"
+                                         Text="3"
+                                         FontSize="30"
+                                         TextColor="White"
+                                         Grid.Row="0"
+                                         Grid.Column="0"/>
+                                </Grid>
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="20"
+                                    HorizontalOptions="CenterAndExpand"
+                                    HorizontalTextAlignment="Center"
+                                    Text="O.S Pendente"
+                                    TextColor="#791AE5"
+                                    VerticalOptions="CenterAndExpand" />
+                            </StackLayout>
+                        </yummy:PancakeView>
+                        <yummy:PancakeView
+                            x:Name="btnOSReparada"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Padding="10"
+                            BackgroundColor="White"
+                            Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1'}"
+                            CornerRadius="15"
+                          xe:TouchEffect.Color="Gray"
+                           xe:Commands.Tap="{Binding TapCommand}"
+                           sk:Skeleton.IsParent="True"
+                           sk:Skeleton.IsBusy="{Binding IsBusy}"
+                           sk:Skeleton.BackgroundColor="{StaticResource GrayColor}">
+                            <yummy:PancakeView.Shadow>
+                                <yummy:DropShadow  Color="#000000"  BlurRadius="10" Offset="20,20" />
+                             </yummy:PancakeView.Shadow>
+                            <StackLayout sk:Skeleton.IsParent="True"
+                           sk:Skeleton.IsBusy="{Binding IsBusy}"
+                           sk:Skeleton.BackgroundColor="{StaticResource GrayColor}">
+                                 <Grid HorizontalOptions="Center"
+                                      VerticalOptions="Center">
+                                  <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                  </Grid.RowDefinitions>
+
+                                  <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                  </Grid.ColumnDefinitions>
+
+                                  <Image HorizontalOptions="Center"
+                                         Source="painel_green"
+                                         Grid.Row="0"
+                                         Grid.Column="0"/>
+                                  <Label HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         FontAttributes="Bold"
+                                         Text="27"
+                                         FontSize="30"
+                                         TextColor="White"
+                                         Grid.Row="0"
+                                         Grid.Column="0"/>
+                                </Grid>
+                               
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="20"
+                                    HorizontalOptions="CenterAndExpand"
+                                    HorizontalTextAlignment="Center"
+                                    Text="O.S Reparado"
+                                    TextColor="#791AE5"
+                                    VerticalOptions="CenterAndExpand" />
+                            </StackLayout>
+                        </yummy:PancakeView>
+                        <yummy:PancakeView
+                            x:Name="btnConfigurarOS"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Padding="10"
+                            BackgroundColor="White"
+                            Border="{yummy:BorderMarkup Color=#791AE5, Thickness='1'}"
+                            CornerRadius="15"
+                            sk:Skeleton.IsParent="True"
+                           sk:Skeleton.IsBusy="{Binding IsBusy}"
+                             xe:TouchEffect.Color="Gray"
+                             xe:Commands.Tap="{Binding TapCommand}"
+                           sk:Skeleton.BackgroundColor="{StaticResource GrayColor}">
+                            <yummy:PancakeView.Shadow>
+                                <yummy:DropShadow  Color="#000000"  BlurRadius="10" Offset="20,20" />
+                             </yummy:PancakeView.Shadow>
+
+                            <StackLayout sk:Skeleton.IsParent="True"
+                           sk:Skeleton.IsBusy="{Binding IsBusy}"
+                           sk:Skeleton.BackgroundColor="{StaticResource GrayColor}">
+                                <Grid HorizontalOptions="Center"
+                                      VerticalOptions="Center">
+                                  <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                  </Grid.RowDefinitions>
+
+                                  <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                  </Grid.ColumnDefinitions>
+
+                                  <Image HorizontalOptions="Center"
+                                         Source="painel_black"
+                                         Grid.Row="0"
+                                         Grid.Column="0"/>
+                                  <Label HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         FontAttributes="Bold"
+                                         Text="7"
+                                         FontSize="30"
+                                         TextColor="White"
+                                         Grid.Row="0"
+                                         Grid.Column="0"/>
+                                </Grid>
+                              
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="20"
+                                    HorizontalOptions="CenterAndExpand"
+                                    HorizontalTextAlignment="Center"
+                                    Text="O.S Sem Reparo"
+                                    TextColor="#791AE5"
+                                    VerticalOptions="CenterAndExpand" />
+                            </StackLayout>
+                        </yummy:PancakeView>
+
+                    </Grid>
+                </StackLayout>
+
+            </yummy:PancakeView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
